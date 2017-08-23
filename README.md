@@ -56,4 +56,3 @@ Make sure you can run `docker` and build
     docker build -t tclavier/scriptcraft .
 
 That will download all require files and build container tclavier/scriptcraft for you. 
-

@@ -10,5 +10,4 @@ cd /minecraft
 [ -n "${OPS:-}" ]         && echo "$OPS" > /minecraft/ops.txt
 [ -n "${ONLINE_MODE:-}" ] && sed -i -e "s/^online-mode=.*/online-mode=$ONLINE_MODE/g" /minecraft/server.properties
 
-/etc/init.d/ssh start
-echo "jsp classroom on" | /usr/bin/java -Xmx8192M -jar spigot-1.11.2.jar
+echo "jsp classroom on" | /usr/bin/java -Xmx8192M -Xmx1G -XX:+UseConcMarkSweepGC -classpath sc-mqtt.jar:spigot-1.12.1.jar org.bukkit.craftbukkit.Main
